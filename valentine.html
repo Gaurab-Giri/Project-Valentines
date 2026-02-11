@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="valentine.css">
+</head>
+
+<body>
+    <audio id="bgMusic" loop>
+        <source src="bgmusic.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="background-overlay"></div>
+    <div class="floating-hearts" id="heart-bg"></div>
+
+    <div class="app-container">
+        <!-- Main Card View -->
+        <div id="view-shell" class="glass-card fade-in">
+        </div>
+
+        <!-- Quiz Overlay -->
+        <div id="quiz-overlay" class="quiz-container hidden fade-in">
+            <div class="glass-card quiz-card">
+                <h3>A Quick Love Quiz... ✍️</h3>
+                <p id="quiz-question"></p>
+                <input type="text" id="quiz-input" placeholder="Your answer..." autocomplete="off">
+                <button onclick="verifyAnswer()" class="btn-valentine">Unlock Next Memory</button>
+                <p id="quiz-error" class="error"></p>
+            </div>
+        </div>
+
+        <!-- Photo Album Section (Hidden initially) -->
+        <div id="photo-album" class="album-container hidden fade-in">
+            <h2 class="album-title">Our Beautiful Memories 📸</h2>
+            <div class="photo-grid" id="photo-grid">
+                <!-- Javascript will inject photos here -->
+            </div>
+            <button onclick="restartJourney()" class="btn-valentine" style="margin-top: 30px;">Replay Our Story
+                ↺</button>
+        </div>
+    </div>
+
+    <script src="valentine.js"></script>
+</body>
+
+</html>
